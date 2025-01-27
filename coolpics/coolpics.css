@@ -18,6 +18,11 @@ body {
   justify-content: center;
 }
 
+main {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .one {
   display: block;
 }
@@ -104,7 +109,6 @@ nav a {
   justify-items: center;
   align-content: center;
   margin: 0 auto;
-  max-width: 60%;
 }
 
 .gallery img {
