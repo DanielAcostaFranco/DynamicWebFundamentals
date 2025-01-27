@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
   --primary-color: #6f61da;
@@ -7,7 +7,7 @@
   --text-dark: #333;
   --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: Mooli, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
 }
 
 body {
@@ -44,6 +44,7 @@ main {
   .one {
     display: block;
     text-align: left;
+    padding: 10px;
   }
 
   .one ul {
@@ -68,6 +69,10 @@ main {
   .two {
     display: block;
   }
+
+  header {
+    font-size: .5em;
+  }
 }
 
 a:link,
@@ -75,12 +80,14 @@ a:visited {
   color: var(--accent-color);
 }
 
+
 header {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1em;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-family: var(--secondary-font);
 }
 
 nav ul {
@@ -100,6 +107,7 @@ nav a {
   text-decoration: none;
   color: white;
   padding: 10px 20px;
+   
 }
 
 .gallery {
@@ -109,6 +117,10 @@ nav a {
   justify-items: center;
   align-content: center;
   margin: 0 auto;
+}
+
+.gallery figure {
+  margin: 10px;
 }
 
 .gallery img {
@@ -130,9 +142,10 @@ img {
 footer {
   background-color: var(--primary-color);
   color: white;
+  font-size: 1em;
   text-align: center;
   padding: 1em;
-  font-size: 1.5em;
+  font-family: var(--secondary-font);
   margin-top: 100px;
 }
 
@@ -149,6 +162,7 @@ footer {
 
   header {
     width: 100%;
+    font-size: .9em;
   }
 }
 
@@ -166,4 +180,12 @@ footer {
   header {
     width: 100%;
   }
+
+  footer {
+    font-size: 1em;
+  }
+}
+
+h1, h2, h3 {
+  font-family: var(--secondary-font);
 }
