@@ -22,7 +22,10 @@ const viewer = document.querySelector(".viewer");
 const closeViewer = document.querySelector(".close-viewer");
 const viewerImage = viewer.querySelector("img");
 
-
+closeViewer.addEventListener("click", () => {
+    viewer.style.visibility = "hidden";
+    viewer.style.opacity = "0";
+});
 
 viewer.addEventListener("click", (event) => {
     if (event.target === viewer) {
