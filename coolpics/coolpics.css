@@ -47,14 +47,13 @@ main {
 .close-viewer {
   background: none;
   border: none;
-  color: white;
   font-size: 2rem;
   cursor: pointer;
   align-self: start;
   padding: 1rem;
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: -100px;
 }
 
 @media screen and (max-width: 700px) {
