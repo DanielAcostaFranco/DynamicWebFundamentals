@@ -39,14 +39,11 @@ const articles = [
     }
 ];
 
-// Referencia al contenedor de los artículos
 const mainContent = document.querySelector("#maincontent");
 
-// Función para crear los artículos dinámicamente
 function createArticle(article) {
     const articleElement = document.createElement("article");
 
-    // Plantilla para el artículo
     articleElement.innerHTML = `
         <div class="left-column">
             <p>${article.date}</p>
@@ -64,9 +61,7 @@ function createArticle(article) {
         </div>
     `;
 
-    // Agregar el artículo al contenedor principal
     mainContent.appendChild(articleElement);
 }
 
-// Crear los artículos dinámicamente
 articles.forEach(createArticle);
