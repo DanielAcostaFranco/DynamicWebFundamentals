@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize); 
 
     generateGallery();
     handleResize();
