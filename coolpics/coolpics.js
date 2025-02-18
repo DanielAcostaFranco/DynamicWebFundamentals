@@ -1,45 +1,64 @@
-const menuButton = document.querySelector(".two");
-const menu = document.querySelector(".menu");
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".two");
+    const menu = document.querySelector(".menu");
+    const gallery = document.querySelector(".gallery");
+    const viewer = document.querySelector(".viewer");
+    const closeViewer = document.querySelector(".close-viewer");
+    const viewerImage = viewer.querySelector("img");
 
-function toggleMenu() {
-    menu.classList.toggle("one");
-}
+    const images = [
+        "norris-sm.jpeg", "norris-sm.jpeg", "norris-sm.jpeg",
+        "norris-sm.jpeg", "norris-sm.jpeg", "norris-sm.jpeg",
+        "norris-sm.jpeg", "norris-sm.jpeg", "norris-sm.jpeg"
+    ];
 
-menuButton.addEventListener("click", toggleMenu);
-
-function handleResize() {
-    if (window.innerWidth > 1000) {
-        menu.classList.remove("hide");
-    } else {
-        menu.classList.add("hide");
+    function generateGallery() {
+        gallery.innerHTML = "";
+        images.forEach((src, index) => {
+            const figure = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = `Picture ${index + 1}`;
+            img.addEventListener("click", () => openViewer(img.src));
+            figure.appendChild(img);
+            gallery.appendChild(figure);
+        });
     }
-}
 
-handleResize();
-window.addEventListener("resize", handleResize);
+    function openViewer(imageSrc) {
+        viewerImage.src = imageSrc;
+        viewer.style.visibility = "visible";
+        viewer.style.opacity = "1";
+    }
 
-const viewer = document.querySelector(".viewer");
-const closeViewer = document.querySelector(".close-viewer");
-const viewerImage = viewer.querySelector("img");
-
-closeViewer.addEventListener("click", () => {
-    viewer.style.visibility = "hidden";
-    viewer.style.opacity = "0";
-});
-
-viewer.addEventListener("click", (event) => {
-    if (event.target === viewer) {
+    closeViewer.addEventListener("click", () => {
         viewer.style.visibility = "hidden";
         viewer.style.opacity = "0";
+    });
+
+    viewer.addEventListener("click", (event) => {
+        if (event.target === viewer) {
+            viewer.style.visibility = "hidden";
+            viewer.style.opacity = "0";
+        }
+    });
+
+    function toggleMenu() {
+        menu.classList.toggle("one");
     }
-});
 
-function openViewer(imageSrc) {
-    viewerImage.src = imageSrc;
-    viewer.style.visibility = "visible";
-    viewer.style.opacity = "1";
-}
+    menuButton.addEventListener("click", toggleMenu);
 
-document.querySelectorAll(".gallery img").forEach(img => {
-    img.addEventListener("click", () => openViewer(img.src));
+    function handleResize() {
+        if (window.innerWidth > 1000) {
+            menu.classList.remove("hide");
+        } else {
+            menu.classList.add("hide");
+        }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    generateGallery();
+    handleResize();
 });
