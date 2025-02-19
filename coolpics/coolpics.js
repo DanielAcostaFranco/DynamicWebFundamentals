@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.querySelector(".two");
     const menu = document.querySelector(".menu");
     const gallery = document.querySelector(".gallery");
-    const viewer = document.querySelector(".viewer");
-    const closeViewer = document.querySelector(".close-viewer");
-    const viewerImage = viewer.querySelector("img");
 
     const images = [
         "norris-sm.jpeg", "norris-sm.jpeg", "norris-sm.jpeg",
@@ -12,18 +9,47 @@ document.addEventListener("DOMContentLoaded", () => {
         "norris-sm.jpeg", "norris-sm.jpeg", "norris-sm.jpeg"
     ];
 
+    function createImageElement(src, index) {
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `Picture ${index + 1}`;
+        img.addEventListener("click", () => openViewer(img.src));
+        figure.appendChild(img);
+        return figure;
+    }
+
     function generateGallery() {
         gallery.innerHTML = "";
         images.forEach((src, index) => {
-            const figure = document.createElement("figure");
-            const img = document.createElement("img");
-            img.src = src;
-            img.alt = `Picture ${index + 1}`;
-            img.addEventListener("click", () => openViewer(img.src));
-            figure.appendChild(img);
+            const figure = createImageElement(src, index);
             gallery.appendChild(figure);
         });
     }
+
+    function createViewer() {
+        const viewer = document.createElement("div");
+        viewer.classList.add("viewer");
+        viewer.style.visibility = "hidden";
+        viewer.style.opacity = "0";
+
+        const closeBtn = document.createElement("button");
+        closeBtn.classList.add("close-viewer");
+        closeBtn.textContent = "X";
+        closeBtn.addEventListener("click", closeViewer);
+
+        const img = document.createElement("img");
+        img.alt = "Expanded Image";
+
+        viewer.appendChild(closeBtn);
+        viewer.appendChild(img);
+        document.body.appendChild(viewer);
+
+        return viewer;
+    }
+
+    const viewer = createViewer();
+    const viewerImage = viewer.querySelector("img");
 
     function openViewer(imageSrc) {
         viewerImage.src = imageSrc;
@@ -31,17 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
         viewer.style.opacity = "1";
     }
 
-    closeViewer.addEventListener("click", () => {
+    function closeViewer() {
         viewer.style.visibility = "hidden";
         viewer.style.opacity = "0";
-    });
-
-    viewer.addEventListener("click", (event) => {
-        if (event.target === viewer) {
-            viewer.style.visibility = "hidden";
-            viewer.style.opacity = "0";
-        }
-    });
+    }
 
     function toggleMenu() {
         menu.classList.toggle("one");
