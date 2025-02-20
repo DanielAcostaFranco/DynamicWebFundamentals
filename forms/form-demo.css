@@ -5,8 +5,13 @@
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
-  }
   
+  }
+
+  header {
+    text-align: center;
+  }
+
   main {
     max-width: 600px;
     margin: 0 auto;
@@ -16,7 +21,6 @@
     border: 1px solid red;
     padding: 0.5em;
   }
-  /* Style the select arrow for Safari */
   select::-webkit-inner-spin-button,
   select::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -25,7 +29,6 @@
   
 
 
-  /* Style the select arrow for other browsers */
   select {
     -moz-appearance: none;
     -webkit-appearance: none;
