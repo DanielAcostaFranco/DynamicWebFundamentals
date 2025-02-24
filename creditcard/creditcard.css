@@ -148,6 +148,6 @@ main {
 
 .card-image {
   z-index: 999999;
-  position: fixed;
+  position: absolute;
   margin-left:330px;
 }
