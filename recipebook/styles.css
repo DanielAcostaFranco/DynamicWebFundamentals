@@ -9,10 +9,7 @@
     --secondary-font: "Amatic SC", sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    border: solid red 1px;
-}
+
 
 body, html {
     margin: 0;
