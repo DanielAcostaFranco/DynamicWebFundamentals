@@ -142,7 +142,7 @@ footer {
 }
 
 .textofarticle h2 {
-    color: var(--secondary-color);
+    color: #095353;
 }
 
 @media screen and (min-width: 1024px) {
