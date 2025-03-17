@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeBook</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="recipes.msj" defer></script>
-    <script src="main.js"defer></script>
+    <script src="recipes.mjs" type="module" defer></script>
+    <script src="main.js" type="module" defer></script>
     <meta property="og:title" content="RecipeBook">
     <meta property="og:type" content="website" />
     <meta property="og:description" content="In this website you will find thousands of recipes">
@@ -18,33 +18,19 @@
     <header>
         <img class="logo" src="images/recipe-book.png" alt="logo">
         <h1>RECIPEBOOK</h1>
-
     </header>
     <main>
-        <form class="searchform" action= "#">
+        <form class="searchform" action="#">
             <div>
-                <input class="placeholder" type="search" placeholder="Find a recipe"/>
-                <button type="button"><img class="magnif" src="images/search.svg"alt="search"></button>
+                <input class="placeholder" id="search-input" type="search" placeholder="Find a recipe" />
+                <button id="search-button" type="button">
+                    <img class="magnif" src="images/search.svg" alt="search">
+                </button>
             </div>
         </form>
         <hr />
-            <article class="articlecontent">
-                <img class="apple" src="images/apple-crisp.jpg" alt="apple crisp"><br>
-                    <div class="textofarticle">
-                        <div class="tags">
-                            <span>Dessert</span>
-                            <span>Tag 2</span>
-                        </div>
-                            <h2>APPLE CRISP</h2>
-                            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                                <span aria-hidden="true" class="icon-star">⭐</span>
-                                <span aria-hidden="true" class="icon-star">⭐</span>
-                                <span aria-hidden="true" class="icon-star">⭐</span>
-                                <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                                <span aria-hidden="true" class="icon-star-empty">☆</span>
-                            </span>
-                    </div>
-            </article>
+        <section id="recipe-container">
+        </section>
     </main>
     
     <footer>
@@ -54,10 +40,6 @@
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
         <a class="contribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
-      
     </footer>
-    <br>
-    
-
 </body>
 </html>
