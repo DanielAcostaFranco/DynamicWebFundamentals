@@ -83,6 +83,7 @@ main {
     width: 50%;
     height: 30px;
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .social a {
@@ -118,7 +119,7 @@ footer {
     height: 20px;
 }
 
-/* --- Estilos para las recetas (MODIFICADOS) --- */
+
 
 #recipe-container {
     display: flex;
@@ -130,11 +131,11 @@ footer {
     border: 1px solid black;
     border-radius: 5px;
     margin: 20px;
-    max-width: 90%; /* Ajusta el ancho según sea necesario */
+    width: 80%; 
 }
 
 .recipe img {
-    width: 700px; /* La imagen ocupa la mitad del contenedor */
+    width: 700px; 
     height: 500px;
 }
 
@@ -169,20 +170,20 @@ footer {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 1023px) { /* Para pantallas menores a 1024px */
+@media screen and (max-width: 1023px) { 
     .recipe {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        align-items: center; /* Centra los elementos horizontalmente */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .recipe img {
-        width: 100%; /* La imagen ocupa todo el ancho */
-        max-width: 700px; /* Limita el ancho máximo de la imagen */
-        height: auto; /* Ajusta la altura automáticamente */
+        width: 100%; 
+        max-width: 700px; 
+        height: auto; 
     }
 
     .recipe figcaption {
-        max-width: 100%; /* El texto ocupa todo el ancho */
+        max-width: 100%; 
         padding: 20px;
     }
 }
