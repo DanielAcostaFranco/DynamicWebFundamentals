@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+    --accent1-color: #b80000;
+    --accent2-color: #006AFF;
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Poppins", Helvetica, sans-serif;
+    --paragraph-font: "Poppins", Helvetica, sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--primary-color);
+    --headline-color-on-color: white;
+    --paragraph-color-on-white: var(--primary-color);
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--primary-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    padding: 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: right;
+
+    font-size: 1.2em;
+    font-family: var(--heading-font);
+}
+
+.nav-list li {
+    margin-right: 50px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-list img {
+    margin-right: 40px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3.5em;
+    font-family: var(--heading-font);
+    text-align: center;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--accent2-color);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Easy Find Section */
+.easy-find {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 100px;
+}
+
+.easy-find-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.easy-find h2 {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+
+.easy-find p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.easy-find-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.easy-find-btn {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.easy-find-btn:hover {
+    background-color: var(--accent2-color);
+}
+
+.easy-find-img {
+    flex: 1;
+    /* Permite que la imagen tome el espacio restante */
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Featured Listings Section */
+.featured-listings {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.featured-listings h2 {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 30px;
+}
+
+.listings-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.listing {
+    width: 300px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listing img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.listing h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.listing a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.listing a:hover {
+    background-color: var(--accent2-color);
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+
+.faq p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.still-questions {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.still-questions h2 {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+
+.still-questions p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.contact-btn {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent2-color);
+}
+
+/* Testimonial Section */
+.testimonial {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--accent2-color);
+    /* Darker background for the footer */
+    color: #eee;
+    /* Light text color for better contrast */
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    /* Gap between rows and columns */
+    max-width: 800px;
+}
+
+.footer-links a,
+.footer-links input,
+.footer-links button {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links input {
+    background-color: #444;
+    /* Slightly lighter background for input */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #eee;
+}
+
+.footer-links button {
+    background-color: var(--accent1-color);
+    color: #eee;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-links button:hover {
+    background-color: var(--accent2-color);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+
+.listings-page {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.listings-header {
+    font-size: 2.5em;
+}
+
+.grid-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px 100px;
+}
+
+.listing-grid-item {
+    text-align: left;
+    /* Cambiado a left para alinear el texto en el grid */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    /* Reducido el padding para que quepa mejor en el grid */
+    box-sizing: border-box;
+    /* Importante para que el padding no aumente el tamaño total */
+}
+
+.grid-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    /* Reducido el margen inferior */
+}
+
+.grid-details {
+    padding: 0;
+    /* Eliminado el padding innecesario */
+}
+
+.grid-details h3 {
+    font-size: 1.2em;
+    /* Reducido el tamaño del título */
+    margin-bottom: 5px;
+    /* Reducido el margen inferior */
+}
+
+.grid-details p {
+    font-size: 0.9em;
+    /* Reducido el tamaño del precio */
+    margin-bottom: 10px;
+    /* Reducido el margen inferior */
+}
+
+.learn-more {
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    /* Reducido el tamaño del botón */
+    padding: 8px 15px;
+    /* Reducido el padding del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.listing-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.listing-modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content .image-gallery img {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sign-up {
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+}
+
+.sign-up:hover,
+.learn-more:hover {
+    background-color: var(--accent2-color);
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos de la Galería de Imágenes --- */
+.image-gallery {
+    margin-bottom: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* --- Estilos de la Sección de Detalles --- */
+.details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- Estilos de la Columna Principal de Detalles --- */
+.main-details {
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.main-details h1,
+.main-details h2,
+.side-details h3 {
+    margin-bottom: 10px;
+}
+
+.main-details p {
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* --- Estilos de la Columna Lateral de Detalles --- */
+.side-details {
+    width: 35%;
+    box-sizing: border-box;
+}
+
+/* --- Estilos de la Sección de Contacto --- */
+.contact-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Estilos del Calculador de Hipoteca --- */
+.mortgage-calc {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* --- Estilos de las Secciones de Mapa, Cercanías y Listados Similares --- */
+.map-section,
+.nearby-section,
+.similar-listings {
+    margin-top: 20px;
+}
+
+.map-section img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.similar-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.similar-listing-item {
+    width: 48%;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.similar-listing-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* --- Estilos de la Línea Horizontal --- */
+hr {
+    border: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.view-more-btn {
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: var(--accent2-color);
+}
+
+/* --- Estilos Responsivos --- */
+@media (max-width: 768px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .main-details,
+    .side-details {
+        width: 100%;
+    }
+
+    .similar-listing-item {
+        width: 100%;
+    }
+}
+.contact-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-header {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: var(--paragraph-font);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form {
+        text-align: center;
+    }
+}
+
+.signin-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.signin-header {
+    font-size: 2.5em;
+    font-family: var(--heading-font);
+    margin-bottom: 20px;
+}
+
+.signin-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.email-signin,
+.google-signin {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.email-signin h3,
+.google-signin h3 {
+    font-size: 1.2em;
+    font-family: var(--heading-font);
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: var(--paragraph-font);
+}
+
+.sign-in-btn {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--accent2-color);
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.google-signin-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.google-signin-btn img {
+    height: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .signin-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-signin,
+    .google-signin {
+        width: 100%;
+        max-width: 400px;
+    }
+}
