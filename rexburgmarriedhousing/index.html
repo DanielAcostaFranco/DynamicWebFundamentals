@@ -1,104 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Rexburg Married Housing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Rexburg Married Housing</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="menu-bar">
-                <ul class="nav-list">
-                    <a href="index.html">
-                        <img class="logo" src="images/logo.png" alt="Logo image" height="50px" />
-                    </a>
-                    <div></div>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="listings.html">Rent</a></li>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="hero">
-        <video src="images/herovideo.mp4" autoplay loop muted></video>
-        <h3 class="hero-text">Find Your Perfect Space in Rexburg, Together.</h3>
-        <a href="listings.html" class="hero-link">
-            <button class="hero-btn">View Listings</button>
+  <header>
+    <nav class="site-nav">
+      <div class="menu-bar">
+        <a href="index.html" class="brand">
+          <img class="logo" src="images/logo.png" alt="Rexburg Married Housing logo" height="40" />
         </a>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle>
+          ☰
+        </button>
+
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Rent</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <video src="images/herovideo.mp4" autoplay loop muted></video>
+    <h3 class="hero-text">Find Your Perfect Space in Rexburg, Together.</h3>
+    <a href="listings.html" class="hero-link">
+      <button class="hero-btn">View Listings</button>
+    </a>
+  </div>
+
+  <section class="easy-find">
+    <div class="easy-find-text">
+      <h2>Finding Your Perfect Home Made Easy</h2>
+      <p>Searching for a home can be overwhelming, especially for married couples balancing work and family life. Rexburg Housing streamlines this journey by providing verified listings and essential resources tailored to your needs.</p>
+      <div class="easy-find-buttons">
+        <a href="listings.html" class="easy-find-link">
+          <button class="easy-find-btn">Explore</button>
+        </a>
+      </div>
     </div>
+    <img src="images/house12.webp" alt="Placeholder Image" class="easy-find-img">
+  </section>
 
-    <section class="easy-find">
-        <div class="easy-find-text">
-            <h2>Finding Your Perfect Home Made Easy</h2>
-            <p>Searching for a home can be overwhelming, especially for married couples balancing work and family life. Rexburg Housing streamlines this journey by providing verified listings and essential resources tailored to your needs.</p>
-            <div class="easy-find-buttons">
-                <a href="listings.html" class="easy-find-link">
-                    <button class="easy-find-btn">Explore</button>
-                </a>
-            </div>
-        </div>
-        <img src="images/house12.webp" alt="Placeholder Image" class="easy-find-img">
-    </section>
+  <section class="featured-listings">
+    <h2>Discover Your Perfect Home with Our Trusted Housing Solutions</h2>
+    <div class="listings-container" id="featured-listings-container"></div>
+  </section>
 
-    <section class="featured-listings">
-        <h2>Discover Your Perfect Home with Our Trusted Housing Solutions</h2>
-        <div class="listings-container" id="featured-listings-container">
-            </div>
-    </section>
+  <section class="faq">
+    <h2>FAQs</h2>
+    <p>Find answers to your most pressing questions about housing for couples in Rexburg.</p>
+    <div class="faq-items">
+      <div class="faq-item">
+        <h3>What is Rexburg Married Housing?</h3>
+        <p>Rexburg Married Housing is a platform that connects married couples with verified housing options in Rexburg.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find a listing?</h3>
+        <p>You can browse our listings by clicking on the "View Listings" button on the homepage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I contact a landlord?</h3>
+        <p>Each listing has a contact form that allows you to reach out directly to the landlord.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I have more questions?</h3>
+        <p>You can reach out to us through the "Contact" page for any additional inquiries.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="faq">
-        <h2>FAQs</h2>
-        <p>Find answers to your most pressing questions about housing for couples in Rexburg.</p>
-        <div class="faq-items">
-            <div class="faq-item">
-                <h3>What is Rexburg Married Housing?</h3>
-                <p>Rexburg Married Housing is a platform that connects married couples with verified housing options in Rexburg.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I find a listing?</h3>
-                <p>You can browse our listings by clicking on the "View Listings" button on the homepage.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I contact a landlord?</h3>
-                <p>Each listing has a contact form that allows you to reach out directly to the landlord.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What if I have more questions?</h3>
-                <p>You can reach out to us through the "Contact" page for any additional inquiries.</p>
-            </div>
-        </div>
-    </section>
+  <section class="still-questions">
+    <h2>Still have questions?</h2>
+    <p>Don't hesitate to reach out. We're here to help.</p>
+    <a href="contact.html">
+      <button class="contact-btn">Contact</button>
+    </a>    
+  </section>
 
-    <section class="still-questions">
-        <h2>Still have questions?</h2>
-        <p>Don't hesitate to reach out. We're here to help.</p>
-        <a href="contact.html">
-            <button class="contact-btn">Contact</button>
-        </a>    
-    </section>
+  <section class="testimonial">
+    <p>"Rexburg Married Housing made our home search so easy! We found the perfect place that fits our needs perfectly."</p>
+    <h3>- Emily Johnson</h3>
+  </section>
 
-    <section class="testimonial">
-        <p>"Rexburg Married Housing made our home search so easy! We found the perfect place that fits our needs perfectly."</p>
-        <h3>- Emily Johnson</h3>
-    </section>
+  <footer>
+    <div class="footer-content">
+      <img src="images/logolight.png" alt="Logo image" height="50px" />
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Amenities</a>
+        <a href="#">Subscribe</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+    <p>© 2025 Rexburg Married Housing. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <div class="footer-content">
-            <img src="images/logolight.png" alt="Logo image" height="50px" />
-            <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Amenities</a>
-                <a href="#">Subscribe</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </div>
-        <p>© 2025 Rexburg Married Housing. All rights reserved.</p>
-    </footer>
+  <script src="listings.js"></script>
 
-    <script src="listings.js"></script>
+  <!-- Toggle Menu Script -->
+  <script>
+    const toggleBtn = document.querySelector('[data-menu-toggle]');
+    const navList  = document.querySelector('.nav-list');
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('open');
+      document.body.classList.toggle('nav-open', isOpen);
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.nav-list a').forEach(a => {
+      a.addEventListener('click', () => {
+        navList.classList.remove('open');
+        document.body.classList.remove('nav-open');
+        toggleBtn.setAttribute('aria-expanded','false');
+      });
+    });
+  </script>
 </body>
 </html>
